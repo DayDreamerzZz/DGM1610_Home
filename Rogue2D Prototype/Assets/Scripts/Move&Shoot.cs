@@ -28,13 +28,13 @@ public class Move&Shoot : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, targets.position, speed * Time.deltaTime);
         }
-        else if(Vector2.Distance(transform.position, target.position) > stopDistance && Vector2.Distance(transform.position, target.position) < retreatDistance)
+        else if(Vector2.Distance(transform.position, target.position) < stopDistance && Vector2.Distance(transform.position, target.position) > retreatDistance)
         {
             transform.position = this.transform.position;
         }
         else if(Vectore2.Distance(transform.position target.position) < retreatDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, position, -speed * Time.deltaTime);)
+            transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
         }
    
         if(shotDelay <= 0)
