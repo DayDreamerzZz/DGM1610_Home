@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move&Shoot : MonoBehaviour
+public class MoveShoot : MonoBehaviour
 {
     public float speed;
     public float stopDistance;
@@ -10,7 +10,7 @@ public class Move&Shoot : MonoBehaviour
 
     private Transform target;
     
-    private shotDelay;
+    private float shotDelay;
     public float startDelay;
     public GameObject projectile;
 
@@ -26,13 +26,13 @@ public class Move&Shoot : MonoBehaviour
     {
     if(Vector2.Distance(transform.position, target.position) > stopDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, targets.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         else if(Vector2.Distance(transform.position, target.position) < stopDistance && Vector2.Distance(transform.position, target.position) > retreatDistance)
         {
             transform.position = this.transform.position;
         }
-        else if(Vectore2.Distance(transform.position target.position) < retreatDistance)
+        else if(Vector2.Distance(transform.position, target.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
         }
