@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time = lastAttackTime >= attackRate && Vector2.Distance(transform.position) < attackRange)
+        if (Time.time = lastAttackTime >= attackRate && Vector2.Distance(transform.position) < attackRange)
         {
             Attack();
         }
