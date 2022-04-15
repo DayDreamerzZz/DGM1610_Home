@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.X))
         {
-            if(Time.time - lastAttackTime >= attackRate) 
-                Attack();
+            if (Time.time - lastAttackTime >= attackRate)
+                attack();
         }
     }
     // Set number of calls per frame

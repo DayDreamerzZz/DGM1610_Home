@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         target = new Vector2(player.position.x, player.position.y);
 
-        playerController = GameObject.Find("Player").GetComponent<PlayerContoller>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
