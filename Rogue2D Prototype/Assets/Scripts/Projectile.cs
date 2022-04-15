@@ -30,13 +30,13 @@ public class Projectile : MonoBehaviour
         
         if(transform.position.x == target.x && transform.position.y == target.y)
         {
-            DestroyProject();
+            DestroyProjectile();
         }
     }
 
 void OnTriggerEnter2D(Collider2D other)
 {
-    if (other.Comparing("Player"))
+    if(other.CompareTag("Player"))
     {
         DestroyProjectile();
         playerController.TakeDamage(damage);
@@ -45,6 +45,6 @@ void OnTriggerEnter2D(Collider2D other)
 
 void DestroyProjectile()
 {
-    DestroyProjectile(gameObject);
+    Destroy(gameObject);
 }
 }

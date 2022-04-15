@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Payer Health")]
+    [Header ("Payer Health")]
     public int curHP;
     public int maxHP;
 
@@ -49,12 +49,12 @@ public class PlayerController : MonoBehaviour
         // Apply physics and move the character
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
 
-        UpdateDirections();
+        UpdateDirection();
     }
 
     void UpdateDirection()
     {
-        Vector2 vel = new Vector2(movement.x, movement.y);
+        Vector2 vel = new Vector2(movement.x,movement.y);
 
         if(vel.magnitude != 0)
         {
