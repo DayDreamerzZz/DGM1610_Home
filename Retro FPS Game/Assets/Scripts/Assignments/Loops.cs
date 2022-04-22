@@ -19,7 +19,7 @@ public class Loops : MonoBehaviour
         
         while(ducksInPond < 99)
         {
-            Debu.Log(ducksInPond);
+            Debug.Log(ducksInPond);
             Debug.Log("All of the ducks have flown south for the winter");
             ducksInPond++;
         }
